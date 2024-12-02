@@ -25,9 +25,6 @@ java {
     }
 }
 
-application {
-    mainClass = 'com.shaneauckland.adventofcode2024.day1.MainKt'
-}
 
 tasks.named('test') {
     useJUnitPlatform()

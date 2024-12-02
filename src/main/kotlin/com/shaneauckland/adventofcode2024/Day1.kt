@@ -1,10 +1,8 @@
-package com.shaneauckland.adventofcode2024.day1
+package com.shaneauckland.adventofcode2024
 
-class Main {
+class Day1 {
     fun run() {
-        val data = object {}.javaClass.getResourceAsStream("/part1.txt")
-            ?.bufferedReader()
-            ?.readLines()!!
+        val data = Utils.resourcesFileAsList("/day1.txt")
             .map { it.split("   ") }
             .map { it.first().toInt() to it.last().toInt() }
             .fold(Pair(mutableListOf(), mutableListOf())) { lists: Pair<MutableList<Int>, MutableList<Int>>, (left, right) ->
@@ -35,6 +33,6 @@ class Main {
     }
 }
 
-fun main(args: Array<String>) {
-    Main().run()
+fun main() {
+    Day1().run()
 }
