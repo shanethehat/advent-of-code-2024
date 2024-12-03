@@ -1,7 +1,5 @@
 package com.shaneauckland.adventofcode2024
 
-import kotlin.math.max
-
 class Day2 {
     fun run(reports: List<List<Int>>) {
         val (safeReports, unsafeReports) = reports.partition(::checkReportWithNoDampener)
